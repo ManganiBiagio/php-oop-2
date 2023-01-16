@@ -16,6 +16,17 @@ class Animal{
 
     }
 
+    public function addAccesorie($newaccesorie){
+        $this->accesorieList[]=$newaccesorie;
+    }
+    public function addFood($newfood){
+        $this->foodList[]=$newfood;
+    }
+    public function addMedicine($newMedicine){
+        $this->medicineList[]=$newMedicine;
+    }
+
+
 
 
     /**
