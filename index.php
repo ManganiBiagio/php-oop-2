@@ -5,7 +5,7 @@ require_once "./classes/FoodProduct.php";
 require_once "./classes/MedicineProduct.php";
 require_once "./classes/AccesorieProduct.php";
 
-$scatolette=new FoodProduct("4534ds","da mangiare",6,"cibo","3 mesi");
+$scatolette=new FoodProduct("4534ds","da mangiare",6,"cibo","3 mesi","");
 $cane=new Animal("cane");
 var_dump($scatolette);
 
