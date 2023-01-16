@@ -5,12 +5,14 @@ class Product{
     private string $descrpition;
     private float $price;
     private string $imgURL;
+    private array $animalReference=[];
 
-    public function __construct($_codeProduct,$_description,$_price,$_imgURL){
+    public function __construct($_codeProduct,$_description,$_price,$_imgURL,$_animalReference){
         $this->setCodeProduct($_codeProduct);
         $this->setDescrpition($_description);
         $this->setPrice($_price);
         $this->setImgURL($_imgURL);
+        $this->setAnimalReference($_animalReference);
     }
     
 
@@ -90,6 +92,26 @@ class Product{
     public function setImgURL($imgURL)
     {
         $this->imgURL = $imgURL;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of animalReference
+     */ 
+    public function getAnimalReference()
+    {
+        return $this->animalReference;
+    }
+
+    /**
+     * Set the value of animalReference
+     *
+     * @return  self
+     */ 
+    public function setAnimalReference($animalReference)
+    {
+        $this->animalReference = $animalReference;
 
         return $this;
     }
