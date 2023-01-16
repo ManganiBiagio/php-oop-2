@@ -3,10 +3,12 @@
 class Product{
     private string $codeProduct;
     private string $descrpition;
+    private float $price;
 
-    public function __construct($_codeProduct,$_description){
+    public function __construct($_codeProduct,$_description,$_price){
         $this->setCodeProduct($_codeProduct);
         $this->setDescrpition($_description);
+        $this->setPrice($_price);
     }
     
 
@@ -46,6 +48,26 @@ class Product{
     public function setDescrpition($descrpition)
     {
         $this->descrpition = $descrpition;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of price
+     */ 
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    /**
+     * Set the value of price
+     *
+     * @return  self
+     */ 
+    public function setPrice($price)
+    {
+        $this->price = $price;
 
         return $this;
     }
