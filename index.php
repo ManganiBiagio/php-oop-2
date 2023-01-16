@@ -11,6 +11,8 @@ require_once "./DB/animalDB.php";
 require_once "./DB/accesorieDB.php";
 require_once "./DB/foodDB.php";
 require_once "./DB/medicineDB.php";
+require_once "./DB/userDB.php";
+require_once "./classes/Users.php";
 
 
 // $scatolette=new FoodProduct("4534ds","da mangiare",6,"cibo","3 mesi","","cane");
@@ -86,6 +88,13 @@ foreach($animalList as $animal){
 //var_dump($cane);
 
 
+//BONUS CODE
+
+$userList=array_map(function($user){
+    return new User($user["nickname"],$user["password"],$user["shoppingCart"]);
+},$userList);
+var_dump($userList);
+
 
 ?>
 <!DOCTYPE html>
@@ -103,6 +112,21 @@ foreach($animalList as $animal){
 <body>
     <div class="container">
         <h1>Negozio per animali</h1>
+        <form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Nickname</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Accedi</button>
+  <button type="submit" class="btn btn-success">Genera</button>
+</form>
+
         <!-- sezioni cani -->
         <section>
             <h4>Cani</h4>
