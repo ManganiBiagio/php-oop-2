@@ -4,8 +4,8 @@ class MedicineProduct extends Product{
     private string $usefullTo;
     private string $howToUSe;
 
-    public function __construct($_codeProduct,$_description,$_price,$_imgURL,$_usefullTo,$_howToUSe){
-        parent::__construct($_codeProduct,$_description,$_price,$_imgURL);
+    public function __construct($_codeProduct,$_description,$_price,$_imgURL,$_animalReference,$_usefullTo,$_howToUSe){
+        parent::__construct($_codeProduct,$_description,$_price,$_imgURL,$_animalReference);
         $this->setUsefullTo($_usefullTo);
         $this->setHowToUSe($_howToUSe);
 

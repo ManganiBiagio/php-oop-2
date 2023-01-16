@@ -1,13 +1,24 @@
 <?php
+
+use function PHPSTORM_META\map;
+
 require_once "./classes/Animal.php";
  require_once "./classes/Product.php";
 require_once "./classes/FoodProduct.php";
 require_once "./classes/MedicineProduct.php";
 require_once "./classes/AccesorieProduct.php";
+require_once "./DB/animalDB.php";
 
-$scatolette=new FoodProduct("4534ds","da mangiare",6,"cibo","3 mesi","","cane");
-$cane=new Animal("cane");
-var_dump($scatolette);
+// $scatolette=new FoodProduct("4534ds","da mangiare",6,"cibo","3 mesi","","cane");
+// $cane=new Animal("cane");
+// var_dump($scatolette);
+
+$animalList=array_map(function($animal){
+    return new Animal($animal["type"]);
+
+},$animalList);
+
+var_dump($animalList);
 
 
 
