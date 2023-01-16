@@ -4,11 +4,13 @@ class Product{
     private string $codeProduct;
     private string $descrpition;
     private float $price;
+    private string $imgURL;
 
-    public function __construct($_codeProduct,$_description,$_price){
+    public function __construct($_codeProduct,$_description,$_price,$_imgURL){
         $this->setCodeProduct($_codeProduct);
         $this->setDescrpition($_description);
         $this->setPrice($_price);
+        $this->setImgURL($_imgURL);
     }
     
 
@@ -68,6 +70,26 @@ class Product{
     public function setPrice($price)
     {
         $this->price = $price;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of imgURL
+     */ 
+    public function getImgURL()
+    {
+        return $this->imgURL;
+    }
+
+    /**
+     * Set the value of imgURL
+     *
+     * @return  self
+     */ 
+    public function setImgURL($imgURL)
+    {
+        $this->imgURL = $imgURL;
 
         return $this;
     }

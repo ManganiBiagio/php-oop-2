@@ -6,8 +6,8 @@ class FoodProduct extends Product{
     private string $conservationTime;
 
 
-    public function __construct($_codeProduct,$_description,$_price,$_type,$_conservationTime){
-        parent::__construct($_codeProduct,$_description,$_price);
+    public function __construct($_codeProduct,$_description,$_price,$_imgURL,$_type,$_conservationTime){
+        parent::__construct($_codeProduct,$_description,$_price,$_imgURL);
         $this->setType($_type);
         $this->setConservationTime($_conservationTime);
         
