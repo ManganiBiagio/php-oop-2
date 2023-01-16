@@ -1,5 +1,7 @@
 <?php
-
+require_once "./classes/Animal.php";
+$cane=new Animal("cane");
+var_dump($cane);
 
 
 
