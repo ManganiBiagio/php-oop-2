@@ -7,12 +7,13 @@ require_once "./classes/Product.php";
 require_once "./classes/FoodProduct.php";
 require_once "./classes/MedicineProduct.php";
 require_once "./classes/AccesorieProduct.php";
+require_once "./classes/Users.php";
 require_once "./DB/animalDB.php";
 require_once "./DB/accesorieDB.php";
 require_once "./DB/foodDB.php";
 require_once "./DB/medicineDB.php";
 require_once "./DB/userDB.php";
-require_once "./classes/Users.php";
+
 
 
 // $scatolette=new FoodProduct("4534ds","da mangiare",6,"cibo","3 mesi","","cane");
