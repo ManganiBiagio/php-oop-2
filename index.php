@@ -132,63 +132,21 @@ var_dump($userList);
             <h4>Cani</h4>
             <h6>Cibo</h6>
             <div class="row">
-                <?php foreach($cane->getFoodList() as $food){  ?>
-                <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src=<?php echo $food->getImgURL() ?> class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title"><?php echo $food->getDescrpition() ?></h5>
-                            
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Prezzo: <?php echo $food->getPrice() ?>$</li>
-                            <li class="list-group-item">Tipo:<?php echo $food->getType() ?></li>
-                            <li class="list-group-item">Conservazione:<?php echo $food->getConservationTime() ?></li>
-                        </ul>
-                        
-                    </div>
-                </div>
-                <?php } ?>
+                <?php foreach($cane->getFoodList() as $food){  
+                    $food->printCardHTML();
+                 } ?>
             </div>
             <h6>Medicine</h6>
             <div class="row">
-                <?php foreach($cane->getMedicineList() as $medicine){  ?>
-                <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src=<?php echo $medicine->getImgURL() ?> class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title"><?php echo $medicine->getDescrpition() ?></h5>
-                            
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Prezzo: <?php echo $medicine->getPrice() ?>$</li>
-                            <li class="list-group-item">Usato per:<?php echo $medicine->getUsefullTo() ?></li>
-                            <li class="list-group-item">Utilizzo:<?php echo $medicine->getHowToUSe() ?></li>
-                        </ul>
-                        
-                    </div>
-                </div>
-                <?php } ?>
+                <?php foreach($cane->getMedicineList() as $medicine){
+                    $medicine->printCardHTML();
+                 } ?>
             </div>
             <h6>Accessori</h6>
             <div class="row">
-                <?php foreach($cane->getAccesorieList() as $accesorie){  ?>
-                <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src=<?php echo $accesorie->getImgURL() ?> class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title"><?php echo $accesorie->getDescrpition() ?></h5>
-                            
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Prezzo: <?php echo $accesorie->getPrice() ?>$</li>
-                            <li class="list-group-item">Materiale:<?php echo $accesorie->getMaterial() ?></li>
-                            
-                        </ul>
-                        
-                    </div>
-                </div>
-                <?php } ?>
+                <?php foreach($cane->getAccesorieList() as $accesorie){                   
+                    $accesorie->printCardHTML();               
+                 } ?>
             </div>
         </section>
         <!-- sezione gatti  -->
@@ -196,63 +154,21 @@ var_dump($userList);
             <h4>Gatti</h4>
             <h6>Cibo</h6>
             <div class="row">
-                <?php foreach($gatto->getFoodList() as $food){  ?>
-                <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src=<?php echo $food->getImgURL() ?> class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title"><?php echo $food->getDescrpition() ?></h5>
-                            
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Prezzo: <?php echo $food->getPrice() ?>$</li>
-                            <li class="list-group-item">Tipo:<?php echo $food->getType() ?></li>
-                            <li class="list-group-item">Conservazione:<?php echo $food->getConservationTime() ?></li>
-                        </ul>
-                        
-                    </div>
-                </div>
-                <?php } ?>
+                <?php foreach($gatto->getFoodList() as $food){  
+                    $food->printCardHTML();
+                } ?>
             </div>
             <h6>Medicine</h6>
             <div class="row">
-                <?php foreach($gatto->getMedicineList() as $medicine){  ?>
-                <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src=<?php echo $medicine->getImgURL() ?> class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title"><?php echo $medicine->getDescrpition() ?></h5>
-                            
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Prezzo: <?php echo $medicine->getPrice() ?>$</li>
-                            <li class="list-group-item">Usato per:<?php echo $medicine->getUsefullTo() ?></li>
-                            <li class="list-group-item">utilizzo:<?php echo $medicine->getHowToUSe() ?></li>
-                        </ul>
-                        
-                    </div>
-                </div>
-                <?php } ?>
+                <?php foreach($gatto->getMedicineList() as $medicine){
+                    $medicine->printCardHTML();
+                 } ?>
             </div>
             <h6>Accessori</h6>
             <div class="row">
-                <?php foreach($gatto->getAccesorieList() as $accesorie){  ?>
-                <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src=<?php echo $accesorie->getImgURL() ?> class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title"><?php echo $accesorie->getDescrpition() ?></h5>
-                            
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Prezzo: <?php echo $accesorie->getPrice() ?>$</li>
-                            <li class="list-group-item">Materiale:<?php echo $accesorie->getMaterial() ?></li>
-                            
-                        </ul>
-                        
-                    </div>
-                </div>
-                <?php } ?>
+                <?php foreach($gatto->getAccesorieList() as $accesorie){
+                    $accesorie->printCardHTML();               
+                 } ?>
             </div>
         </section>
     </div>

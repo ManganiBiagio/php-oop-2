@@ -13,6 +13,26 @@ class FoodProduct extends Product{
         
     }
 
+    public function printCardHTML(){
+        ?> <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img src=<?php echo $this->getImgURL() ?> class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"><?php echo $this->getDescrpition() ?></h5>
+                
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Prezzo: <?php echo $this->getPrice() ?>$</li>
+                <li class="list-group-item">Tipo:<?php echo $this->getType() ?></li>
+                <li class="list-group-item">Conservazione:<?php echo $this->getConservationTime() ?></li>
+            </ul>
+            
+        </div>
+    </div>
+    <?
+
+    }
+
 
     /**
      * Get the value of type
